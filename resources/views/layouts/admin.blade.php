@@ -1,95 +1,42 @@
-<!doctype html>
+<!--
+=========================================================
+* Argon Dashboard 2 - v2.0.4
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    Dashboard Admin
+  </title>
+  @include('partials.admin-link')
+</head>
 
-    <!-- ionic icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
-
-  </head>
-
-  <body>
-
-      
-<div class="d-flex">
-  <div class="sidebar p-4">
-    <h4>Menu</h4>
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" href="/dashboard">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/user">User</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/data">Data</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/comment">Comment</a>
-      </li>
-    </ul>
-
-    <div class="mt-auto">
-      <!-- Logout -->
-      <a href="/" class="btn btn-danger">Logout</a>
-    </div>
-  </div>
-  <div class="landing-page">
-      
-    <div class="container">
-       @yield('admin')
-       
-      </div>
-    </div>
-    
-  </div>
+<body class="g-sidenav-show   bg-gray-100">
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
   
-  <style>
-    .sidebar {
-      background-color: #343a40;
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 20px;
-    }
+  <!-- Navbar -->
+  @include('partials.admin-navbar')
 
-    .sidebar .nav-link {
-      color: #fff;
-    }
+  <!-- Content -->
+  @yield('content-admin')
 
-    .sidebar .nav-link:hover {
-      color: #f8f9fa;
-    }
-
-    
-  </style>
-
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
-    
-  </body>
-  {{-- Footer --}}
-  <footer class="bg-primary text-white text-center pb-3">
-    <p>Dibuat Oleh <ion-icon name="logo-instagram"></ion-icon> <a href="https://www.instagram.com/baguskelana_/" class="text-white fw-bold">Baguskelana_</a></p>
-  </footer>
-  <!-- Akhir Footer -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!--   Core JS Files   -->
+  @include('partials.admin-script')
+</body>
 
 </html>

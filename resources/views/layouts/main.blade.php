@@ -17,7 +17,7 @@
 
   <body>
 
-      @include('partials.navbar')
+      @include('partials.user-navbar')
       <div class="landing-page">
       
       <div class="container">

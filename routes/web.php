@@ -55,21 +55,25 @@ Route::get('huawei', function () {
 
 Route::get('dashboard', function () {
     return view('dashboard-admin/dashboard', [
+        "title" => "Dashboard"
     ]);
 });
 
 Route::get('data', function () {
     return view('dashboard-admin/data', [
+        "title" => "Data"
     ]);
 });
 
 Route::get('user', function () {
     return view('dashboard-admin/user', [
+        "title" => "User"
     ]);
 });
 
 Route::get('comment', function () {
     return view('dashboard-admin/comment', [
+        "title" => "Comment"
     ]);
 });
 

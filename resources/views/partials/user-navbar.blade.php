@@ -25,9 +25,10 @@
             <a class="nav-link {{ ($title === "Huawei") ? 'active' : '' }}" href="/huawei">Huawei</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary btn-login" href="/dashboard">Login</a>
+            <a class="btn btn-primary btn-login" href="/login">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  

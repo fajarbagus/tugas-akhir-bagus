@@ -31,7 +31,7 @@
     
   </body>
   {{-- Footer --}}
-  <footer class="bg-primary text-white text-center pb-3">
+  <footer class="bg-primary text-white text-center pb-1 ">
     <p>Dibuat Oleh <ion-icon name="logo-instagram"></ion-icon> <a href="https://www.instagram.com/baguskelana_/" class="text-white fw-bold">Baguskelana_</a></p>
   </footer>
   <!-- Akhir Footer -->

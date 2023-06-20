@@ -5,7 +5,8 @@
     
     <div class="tengah">
         <div class="w-75 p-3">
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <div class="position-relative w-75 mx-auto animated slideInDown">              
+            <select class="form-select form-select-md mb-3 border-0 rounded-pill w-100 py-3 ps-4 pe-10" aria-label=".form-select-md example">
                 <option selected>Pilih Harga</option>
                 <option value="1">1.000.000-1.600.000</option>
                 <option value="2">1.600.001-2.200.000</option>
@@ -13,11 +14,8 @@
                 <option value="3">2.800.001-3.400.000</option>
                 <option value="3">3.400.001-4.000.000</option>
             </select>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                  </svg> Cari</button>
-              </div>
+              <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
+          </div>
         </div>
     </div>
     <div 
@@ -68,6 +66,7 @@
           </div>
         </div>
       </div>
+    </div>
       
     <style>
         .tengah {

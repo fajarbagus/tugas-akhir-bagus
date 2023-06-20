@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HpController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +21,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PostController::class, 'index']);
+	 
+Route::get('/dashboard', function () {
+    return view('index');
+});
+ 
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
 
 Route::get('asus', function () {
     return view('dashboard-user/asus', [
@@ -53,28 +68,23 @@ Route::get('huawei', function () {
     ]);
 });
 
-Route::get('dashboard', function () {
-    return view('dashboard-admin/dashboard', [
-        "title" => "Dashboard"
+Route::get('signup', function () {
+    return view('login-admin/index', [
+        
     ]);
 });
 
-Route::get('data', function () {
-    return view('dashboard-admin/data', [
-        "title" => "Data"
-    ]);
-});
+// =================================== Admin =====================================
 
-Route::get('user', function () {
-    return view('dashboard-admin/user', [
-        "title" => "User"
-    ]);
-});
 
-Route::get('comment', function () {
-    return view('dashboard-admin/comment', [
-        "title" => "Comment"
-    ]);
-});
+Route::get('dashboard', [DashboardController::class, 'dashboard']);
+Route::get('user', [UserController::class, 'show'])->name('useradd');
+Route::get('createuser', [UserController::class, 'create']);
+Route::PUT('user/store', [UserController::class, 'store']);
+Route::get('data', [HpController::class, 'show'])->name('contoh');
+Route::PUT('data/store', [HpController::class, 'store']);
+Route::get('createdata', [HpController::class, 'create']);
+Route::get('comment', [CommentController::class, 'show']);
+
 
 

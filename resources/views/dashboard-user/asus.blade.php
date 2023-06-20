@@ -40,7 +40,7 @@
           </div>
           <div class="col-md-3">
             <div class="card">
-              <img src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1591411479016/c6ea838a2b860113e264e999b27ff2c7.png" class="gambar" alt="vivo y11">
+              <img src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1591411479016/c6ea838acler2b860113e264e999b27ff2c7.png" class="gambar" alt="vivo y11">
               <div class="card-body">
                 <h5 class="card-title">Vivo y11</h5>
                 <p class="card-text">At vero eos et accusamus et iusto odio dignissimos ducimus.</p>

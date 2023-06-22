@@ -84,6 +84,7 @@ Route::PUT('user/store', [UserController::class, 'store']);
 Route::get('data', [HpController::class, 'show'])->name('contoh');
 Route::PUT('data/store', [HpController::class, 'store']);
 Route::get('createdata', [HpController::class, 'create']);
+Route::get('delete/{id}', [HpController::class, 'remove'])->name('remove');
 Route::get('comment', [CommentController::class, 'show']);
 
 

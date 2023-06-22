@@ -75,10 +75,10 @@
                           <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                             Edit
                           </a>
-                          <span class="text-secondary font-weight-bold text-xs" data-toggle="tooltip">
+                          <span" class= data-toggle="tooltip" ">
                             |
                           </span>
-                          <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete user">
+                          <a href="{{ url('delete/'.$handphone->id) }};" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete user">
                             Delete
                           </a>
                         </td>

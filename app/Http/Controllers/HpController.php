@@ -23,4 +23,8 @@ class HpController extends Controller
         hp::create($request->all());
         return redirect()->route('contoh');
     }
+    function remove($id){
+        $hps = hp::find($id)->delete();
+        return redirect()->route('contoh');
+    }
 }

@@ -23,6 +23,7 @@ class CreateHpsTable extends Migration
             $table->enum('Fingerprint',['Ya','Tidak']);
             $table->string('Sistem_Operasi');
             $table->string('Type');
+            $table->timestamps();
         });
     }
 

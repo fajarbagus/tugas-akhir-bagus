@@ -19,6 +19,7 @@ class CreateUserhpsTable extends Migration
             $table->string('password');
             $table->string('nama');
             $table->string('username');
+            $table->timestamps();
         });
     }
 

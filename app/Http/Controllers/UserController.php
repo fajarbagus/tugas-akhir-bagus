@@ -22,5 +22,11 @@ class UserController extends Controller
         $title = "User";
         userhp::create($request->all());
         return redirect()->route('useradd');
+    } 
+
+    function delete($id){
+        $hps = Userhp::find($id)->delete();
+        return redirect()->route('useradd');
+ 
     }
 }

@@ -14,7 +14,7 @@ class CreateUserhpsTable extends Migration
     public function up()
     {
         Schema::create('Userhps', function (Blueprint $table) {
-            $table->id('id_user');
+            $table->id('id');
             $table->string('email');
             $table->string('password');
             $table->string('nama');

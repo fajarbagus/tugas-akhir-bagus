@@ -78,7 +78,7 @@
                           <span" class= data-toggle="tooltip" ">
                             |
                           </span>
-                          <a href="{{ url('delete/'.$handphone->id) }};" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete user">
+                          <a href="{{ url('delete/'.$handphone->id) }};" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete Data">
                             Delete
                           </a>
                         </td>

@@ -78,13 +78,17 @@ Route::get('signup', function () {
 
 
 Route::get('dashboard', [DashboardController::class, 'dashboard']);
+
 Route::get('user', [UserController::class, 'show'])->name('useradd');
 Route::get('createuser', [UserController::class, 'create']);
 Route::PUT('user/store', [UserController::class, 'store']);
+Route::get('delete-user/{id_user}', [UserController::class, 'delete'])->name('remove');
+
 Route::get('data', [HpController::class, 'show'])->name('contoh');
 Route::PUT('data/store', [HpController::class, 'store']);
 Route::get('createdata', [HpController::class, 'create']);
 Route::get('delete/{id}', [HpController::class, 'remove'])->name('remove');
+
 Route::get('comment', [CommentController::class, 'show']);
 
 

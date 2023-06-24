@@ -24,7 +24,7 @@
               <h6 class="text-capitalize">tambah</h6>
             </div>
             <div class="card-body p-3">
-              <form action="data/store" method="POST">
+              <form action="data/store" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -58,6 +58,10 @@
                 <div class="form-group">
                     <label for="name">Type HP:</label>
                     <input type="text" class="form-control" id="name" name="Type" placeholder="Masukkan nama">
+                </div>
+                <div class="form-group">
+                    <label for="name">Choose File</label>
+                    <input type="file" class="form-control" id="name" name="File" placeholder="Masukkan nama">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>

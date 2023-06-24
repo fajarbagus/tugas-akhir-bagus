@@ -15,14 +15,15 @@ class CreateHpsTable extends Migration
     {
         Schema::create('hps', function (Blueprint $table) {
             $table->id();
-            $table->enum('merk', ['Samsung', 'Oppo','Vivo','Sony','Asus','Huawei']);
+            $table->string('merk');
             $table->string('harga_hp');
-            $table->enum('RAM', ['2','3','4','6','8']);
-            $table->enum('Internal',['16','32','64','128','256']);
+            $table->string('RAM');
+            $table->string('Internal');
             $table->string('Kamera');
-            $table->enum('Fingerprint',['Ya','Tidak']);
+            $table->string('Fingerprint');
             $table->string('Sistem_Operasi');
             $table->string('Type');
+            $table->string('File');
             $table->timestamps();
         });
     }

@@ -1,24 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\hp;
 
 use Illuminate\Http\Request;
-use App\Models\hp;
 
 class HpController extends Controller
 {
-    function show(){
+    public function show(){
         $title = "Data";
         $data = hp::all();
-        return view('dashboard-admin.data.data', ['handphones'=>$data], compact('title'));
+        return view('admin.data.index', ['handphones'=>$data], compact('title'));
     }
 
-    function create(){
+    public function create(){
         $title = "Data";
-        return view('dashboard-admin.data.create',  compact('title'));
+        return view('admin.data.create',  compact('title'));
     }
 
-    function store(Request $request){
+    public function store(Request $request){
         $title = "Data";
         $this->validate($request,[
             'merk' => 'required',
@@ -47,10 +47,10 @@ class HpController extends Controller
             'Type' => $request->Type,
             'File' => $nama_file,
         ]);
-        return redirect()->route('contoh');
+        return redirect()->route('data');
     }
-    function remove($id){
+    public function remove($id){
         $hps = hp::find($id)->delete();
-        return redirect()->route('contoh');
+        return redirect()->route('data');
     }
 }

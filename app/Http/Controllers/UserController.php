@@ -3,30 +3,47 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Userhp;
+use App\Models\User;
+use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\RedirectResponse;
 
 class UserController extends Controller
 {
     function show(){
         $title = "User";
-        $data = Userhp::all();
-        return view('dashboard-admin.user.user', ['userhps'=>$data], compact('title'));
+        $data = User::all();
+        return view('admin.user.index', ['user'=>$data], compact('title'));
     }
 
     function create(){
         $title = "User";
-        return view('dashboard-admin.user.create',  compact('title'));
+        return view('admin.user.create',  compact('title'));
     }
 
-    function store(Request $request){
-        $title = "User";
-        userhp::create($request->all());
-        return redirect()->route('useradd');
-    } 
+    public function store(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        event(new Registered($user));
+
+        return redirect()->route('user');
+    }
 
     function delete($id){
-        $hps = Userhp::find($id)->delete();
-        return redirect()->route('useradd');
+        $hps = User::find($id)->delete();
+        return redirect()->route('user');
  
     }
 }
